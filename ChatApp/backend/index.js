@@ -1,9 +1,10 @@
-const express = require("express");
-const cors = require("cors");
-const axios = require('axios');
+const express = require('express');
+const cors = require('cors');
 const app = express();
+const axios = require('axios');
+
 app.use(express.json());
-app.use(cors({ origin: true }));
+app.use(cors({origin:true}));
 
 app.post("/authenticate", async (req, res) => {
   const { username } = req.body;
